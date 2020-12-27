@@ -1,0 +1,23 @@
+/* reset syntax */
+
+html, body{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* univeral selector */
+
+*{
+    box-sizing: border-box;
+}
+
+input[type="button"].isOn{
+    background-color: lightslategray;
+}
+
+.menu-container{
+    height: 20px;
+    border: 1px solid red;
+    display: flex;
+    
+}

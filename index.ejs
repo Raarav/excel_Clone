@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script type="text/javascript" src="./index.js"></script> -->
+    <link rel="stylesheet" href="style.css">
+    <title><%=title%></title>
+</head>
+
+<body>
+    <!-- <div class="menu-container">Menu</div> -->
+    <!-- <div class="menu-options">Menu-Options</div> -->
+    <!-- <div class="menu-options">
+        <div id="New">New</div>
+        <div id="open">Open</div>
+        <div id="save!">Save</div>
+    </div> -->
+
+    <div class="menu-container">
+        <div class="menu" id="File">File</div>
+        <div class="menu" id="Home">Home</div>
+    </div>
+
+    <div class="menu-option-container" >
+        <div class="menu-options" id="File-menu-options">
+            <div id="New">New</div>
+            <div id="Open">Open</div>
+            <div id="Save!">Save</div>
+        </div>
+
+        <div class="menu-option" id="Home-menu-options">
+            <div class="menu-group">
+                <div class="menu-row">
+                <select name="" id="font-family">
+                    <option value="Arial">Font-1</option>
+                    <option value="Cambria">Font-2</option>
+                    <option value="Georgia">Font-3</option>
+                    <option value="Monospace">Font-4</option>
+                    <option value="Sans-serif">Font-5</option>
+                </select>
+                <select name="" id="font-size">
+                    <option value="10">10</option>
+                    <option value="12">12</option>
+                    <option value="14">14</option>
+                    <option value="16">16</option>
+                    <option value="18">18</option>
+                    <option value="22">22</option>
+                    
+                </select>
+            </div>
+            
+            <div class="menu-row">
+                <input type="button" id="bold" value="B">
+                <input type="button" id="underline" value="U">
+                <input type="button" id="italic" value="I">
+                <input type="color" id="bg-color" value="rebeccapurple">
+                <input type="color" id="text-color" value="gray">
+            </div>
+        </div>
+        <div class="menu-group">
+            <input type="button" value="L" halign="left">
+            <input type="button" value="C" halign="center">
+            <input type="button" value="R" halign="right">
+        </div>
+    </div> 
+        
+        
+        
+    </div>
+    <div class="formula-container">
+        formula
+        <input type="text" readonly="true" id="address-input">
+        <input type="text" id="formula-input"></div>
+        <!-- <input type="text" class="text-container ib"> -->
+        <!-- <input type="text" class="formula-container "></div>
+            <input type="text" id="text-input" class="text-container ib">
+        <input type="text" id="formula-input" class="formula-container "></div> -->
+    <div class="content-container">
+        <div id="top-left-cell" class="top-left-cell"></div>
+        <div id="top-row" class="top-row">
+            <%for( let j=0;j<cols;j++){%>
+            <div class="cell">
+                <%= String.fromCharCode(j+65)%>
+            </div>
+            <%}%>
+        </div>
+        <div id="left-col" class="left-col" >
+            <%for(let j=1;j<=rows;j++){%>
+            <div class="cell" contenteditable="true">
+                <%=j%>
+            </div>
+            <%}%>
+        </div>
+        <!-- <div id="grid"></div> -->
+        <div id="grid" class="grid">
+            <% for(let i=0;i<rows;i++) { %>
+            <div class="row">
+                <% for(let j=0;j<cols;j++){ %>
+                <div class="cell" contenteditable="true" r-id=<%=i%> c-id=<%=j%>>
+                    <!-- </div> -->
+                    <!-- <div class = "cell" contenteditable="true" 
+                        r-id=<%=i%> c-id=<%=j%>></div>
+                         -->
+
+                </div>
+
+                <!-- </div> -->
+                <%}%></div>
+                <!-- </div> -->
+                     <% } %>
+            </div>
+        </div>
+        <div class="sheets"></div>
+        <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -9,7 +9,7 @@ function createWindow(){
             nodeIntegration: true
         }
     })
-    win.loadFile("index.html").then(function(){
+    win.loadFile("index.ejs").then(function(){
         win.maximize();
         win.webContents.openDevTools();
     })
